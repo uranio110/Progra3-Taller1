@@ -37,7 +37,7 @@ public class Product implements Comparable<Product>{
 
     @Override
     public int compareTo(Product other) {
-        return this.description.compareToIgnoreCase(other.description);
+        return this.description.compareTo(other.description);
     }
 
     

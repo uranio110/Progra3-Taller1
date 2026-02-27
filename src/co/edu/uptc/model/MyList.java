@@ -60,12 +60,9 @@ public class MyList<T> implements List<T> {
         return removed;
     }
 
-    // ── Tamaño y vacío ───────────────────────────────────────────
+    // ── Tamaño───────────────────────────────────────────
     @Override
     public int size() { return size; }
-
-    @Override
-    public boolean isEmpty() { return size == 0; }
 
     // ── Set (necesario para Collections.sort) ────────────────────
     @Override
@@ -107,6 +104,7 @@ public class MyList<T> implements List<T> {
     }
 
     // ── Métodos no usados ────────────────────────────────────────
+    @Override public boolean isEmpty() { return size == 0; }
     @Override public void add(int index, T element) { throw new UnsupportedOperationException(); }
     @Override public boolean addAll(Collection<? extends T> c) { throw new UnsupportedOperationException(); }
     @Override public boolean addAll(int index, Collection<? extends T> c) { throw new UnsupportedOperationException(); }
